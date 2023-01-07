@@ -1,7 +1,13 @@
 # Projetinho-Site-Menu-Comida
  Projetinho para Treinar conceitos aprendidos em react, assim como arquitetura planejada
 
- ### Elementos do Projeto ###
+## Dependências do Projeto ##
+FontAwesome
+https://fontawesome.com/v5/docs/web/use-with/react
+
+
+
+### Árvores de Componentes ###
  Primeiramente identificar quais serão os diferentes componentes do meu projeto, facilitando o processo de desenvolvimento
 
 - Navbar
@@ -48,9 +54,10 @@
 ### Padrões de Estilos ###
 Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
 
-- Display e derivados 
+- Display, formatação layout e derivados (flex, flex-direcion, justify-content, text-align) 
 - Dimensões (width, height)
 - Margens   (top,left)
 - Padding   (top, left, right, down)
+- Formatação caracteres (font-family, font-weight, font-style)
 - Cores     (background, color, border-color) 
 - Bordas    (width, radius) 

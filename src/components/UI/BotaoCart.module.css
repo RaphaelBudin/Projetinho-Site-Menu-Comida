@@ -16,7 +16,8 @@
 }
 
 .contador {
-    width: 20px;
+    text-align: center;
+    width: 24px;
     height: fit-content;
     margin-left:10px;
     background-color: darkred;
