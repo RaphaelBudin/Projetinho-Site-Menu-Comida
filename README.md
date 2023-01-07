@@ -50,9 +50,9 @@ Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
     - Imagem ocupando os primeiros 2/5  da tela [x]
     - Cor de fundo: cinza chumbo [x]
 
-- Card Cinza
-    - Tìtulo
-    - Descrição
+- Card Cinza [x]
+    - Tìtulo [x]
+    - Descrição [x]
 
 - Card Branco
     - Produto
