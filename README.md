@@ -38,12 +38,12 @@ Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
 ## Árvores de Componentes ##
  Primeiramente identificar quais serão os diferentes componentes do meu projeto, facilitando o processo de desenvolvimento
 
-- Navbar
-    - Nome Loja
-    - Botão Carrinho
-        - Ícone carrinho
-        - Texto carrinho
-        - Contador Items
+- Navbar [x]
+    - Nome Loja [x]
+    - Botão Carrinho [x]
+        - Ícone carrinho [x]
+        - Texto carrinho [x]
+        - Contador Items [x]
 
 - Plano de Fundo
     - Imagem ocupando os primeiros 2/5  da tela
