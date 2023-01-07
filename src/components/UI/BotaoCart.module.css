@@ -2,23 +2,32 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-right: 65px;
-    padding-top: 15px;
+    height: fit-content;
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: #654321;
+    border-radius: 100px;
+}
+
+.container:hover {
+    background-color: blueviolet;
 }
 
 .icone {
-
+    margin-left: 10px;
+    color: white;
 }
 
 .texto {
-    margin-left:10px;
+    margin: auto 0 auto 10px; 
+    font-size: 10px;
     color: white;
 }
 
 .contador {
     text-align: center;
-    width: 24px;
     height: fit-content;
+    width: 24px;
     margin-left:10px;
     background-color: darkred;
     color: burlywood;

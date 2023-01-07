@@ -23,7 +23,7 @@ Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
 - Dimensões (width, height)
 - Margens   (top,left)
 - Padding   (top, left, right, down)
-- Formatação caracteres (font-family, font-weight, font-style)
+- Formatação caracteres (font-family, font-size, font-weight, font-style)
 - Cores     (background, color, border-color) 
 - Bordas    (width, radius) 
 
