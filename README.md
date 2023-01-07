@@ -12,7 +12,7 @@ O padrão utilizado neste projeto é baseado no **Conventional Commits**, porém
 - Usando 'style' para informar alterações na estilização e layout do código, ao invés do 'feat'
 - Não informarei alterações em linter, trailing spaces e etc.
 
-### Padrão de Importação ###
+## Padrão de Importação ##
 Os imports devem ser organizados na ordem que segue:
 
 - Componentes do React
@@ -23,7 +23,7 @@ Os imports devem ser organizados na ordem que segue:
 - Estilos .css / module.css 
 - StyledComponents
 
-### Padrão de Estilos ###
+## Padrão de Estilos ##
 Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
 
 - Display, formatação layout e derivados (flex, flex-direcion, justify-content, text-align) 
@@ -34,7 +34,7 @@ Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
 - Cores     (background, color, border-color) 
 - Bordas    (width, radius) 
 
-### Árvores de Componentes ###
+## Árvores de Componentes ##
  Primeiramente identificar quais serão os diferentes componentes do meu projeto, facilitando o processo de desenvolvimento
 
 - Navbar
