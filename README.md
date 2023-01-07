@@ -11,6 +11,7 @@ O padrão utilizado neste projeto é baseado no **Conventional Commits**, porém
 - Usando '/' ao invés de ':', pois aumenta a legibilidade. Exemplo: 'feat/Novo Recurso' ao invés de 'feat: Novo Recurso'
 - Usando 'style' para informar alterações na estilização e layout do código, ao invés do 'feat'
 - Não informarei alterações em linter, trailing spaces e etc.
+- Usarei 'readme' ao invés do 'docs' para informar alterações específicas do Readme
 
 ## Padrão de Importação ##
 Os imports devem ser organizados na ordem que segue:
