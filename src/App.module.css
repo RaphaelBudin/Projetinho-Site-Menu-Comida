@@ -1,3 +1,15 @@
 .mainContainer {
-    /* background-color: #222222; */
+    position: relative;
+    z-index: -2;
+    text-align: center;
+    height: 100%;
+    color: white;
+}
+
+.imagemFundo {
+    z-index: -1;
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    opacity: 0.2;
 }
