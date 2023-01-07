@@ -23,6 +23,7 @@ Os imports devem ser organizados na ordem que segue:
 - Componentes próprios 
 - Estilos .css / module.css 
 - StyledComponents
+- Arquivos da pasta 'public' (fotos, ícones, etc)
 
 ## Padrão de Estilos ##
 Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
@@ -47,7 +48,7 @@ Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
 
 - Plano de Fundo
     - Imagem ocupando os primeiros 2/5  da tela
-    - Cor de fundo: cinza chumbo
+    - Cor de fundo: cinza chumbo [x]
 
 - Card Cinza
     - Tìtulo
