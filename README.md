@@ -46,8 +46,8 @@ Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
         - Texto carrinho [x]
         - Contador Items [x]
 
-- Plano de Fundo
-    - Imagem ocupando os primeiros 2/5  da tela
+- Plano de Fundo [x]
+    - Imagem ocupando os primeiros 2/5  da tela [x]
     - Cor de fundo: cinza chumbo [x]
 
 - Card Cinza
