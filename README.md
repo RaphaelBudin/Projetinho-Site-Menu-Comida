@@ -6,7 +6,6 @@ FontAwesome
 https://fontawesome.com/v5/docs/web/use-with/react
 
 
-
 ### Árvores de Componentes ###
  Primeiramente identificar quais serão os diferentes componentes do meu projeto, facilitando o processo de desenvolvimento
 
