@@ -5,6 +5,27 @@
 FontAwesome
 https://fontawesome.com/v5/docs/web/use-with/react
 
+### Padrão de Importação ###
+Os imports devem ser organizados na ordem que segue:
+
+- Componentes do React
+- Componentes do ReactDOM
+- Componentes do ReactNavigation
+- Dependências externas
+- Componentes próprios 
+- Estilos .css / module.css 
+- StyledComponents
+
+### Padrão de Estilos ###
+Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
+
+- Display, formatação layout e derivados (flex, flex-direcion, justify-content, text-align) 
+- Dimensões (width, height)
+- Margens   (top,left)
+- Padding   (top, left, right, down)
+- Formatação caracteres (font-family, font-weight, font-style)
+- Cores     (background, color, border-color) 
+- Bordas    (width, radius) 
 
 ### Árvores de Componentes ###
  Primeiramente identificar quais serão os diferentes componentes do meu projeto, facilitando o processo de desenvolvimento
@@ -49,14 +70,3 @@ https://fontawesome.com/v5/docs/web/use-with/react
     - Botões Navegação
         - Fechar
         - Finalizar Pedido
-
-### Padrões de Estilos ###
-Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
-
-- Display, formatação layout e derivados (flex, flex-direcion, justify-content, text-align) 
-- Dimensões (width, height)
-- Margens   (top,left)
-- Padding   (top, left, right, down)
-- Formatação caracteres (font-family, font-weight, font-style)
-- Cores     (background, color, border-color) 
-- Bordas    (width, radius) 
