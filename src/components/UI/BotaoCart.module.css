@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 65px;
+    padding-top: 15px;
+}
+
+.icone {
+
+}
+
+.texto {
+    margin-left:10px;
+    color: white;
+}
+
+.contador {
+    width: 20px;
+    height: fit-content;
+    margin-left:10px;
+    background-color: darkred;
+    color: burlywood;
+    border-radius: 100px;
+}

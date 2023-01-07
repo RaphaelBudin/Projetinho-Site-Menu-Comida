@@ -1,0 +1,13 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    background-color: brown;
+}
+
+.nomeLoja {
+    padding-left: 65px;
+    padding-top: 15px;
+    color: white;
+}

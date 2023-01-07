@@ -1,8 +1,8 @@
 # Projetinho-Site-Menu-Comida
  Projetinho para Treinar conceitos aprendidos em react, assim como arquitetura planejada
 
-
  ### Elementos do Projeto ###
+ Primeiramente identificar quais serão os diferentes componentes do meu projeto, facilitando o processo de desenvolvimento
 
 - Navbar
     - Nome Loja
@@ -44,3 +44,13 @@
     - Botões Navegação
         - Fechar
         - Finalizar Pedido
+
+### Padrões de Estilos ###
+Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
+
+- Display e derivados 
+- Dimensões (width, height)
+- Margens   (top,left)
+- Padding   (top, left, right, down)
+- Cores     (background, color, border-color) 
+- Bordas    (width, radius) 
