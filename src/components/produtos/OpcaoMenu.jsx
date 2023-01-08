@@ -6,7 +6,7 @@ export default function OpcaoMenu({addProductHandler, itemCardapio}){
     return (
         <div className={styles.container}>
             <InformacoesProduto produto={itemCardapio}/>
-            <AdicionaProduto addProdutoHandler={addProductHandler}/>
+            <AdicionaProduto idProduto={itemCardapio.id} addProdutoHandler={addProductHandler}/>
         </div>
     );
 }
