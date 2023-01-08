@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.primeiraLinha{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.quantia {
+    margin: auto;
+    font-size: 14px;
+}
+
+.input {
+    height: 20px;
+    width: 60px;
+    margin-left: 14px;
+}
+
+.botao {
+    margin-top: 12px;
+    padding: 2px 0px;
+    font-weight: bolder;
+    color: white;
+    background-color: darkorange;
+    border-color: currentColor;
+    border-radius: 10px;
+}
