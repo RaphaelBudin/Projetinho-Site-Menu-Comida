@@ -1,7 +1,7 @@
 import { createContext } from "react";
 
-export const ProductContext = createContext({
-});
-
 export const AllProductsContext = createContext({
+  opcoesMenu: [],
+  carrinho: [],
+  atualizaQuantidadeHandler: ()=>{},
 });

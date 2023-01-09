@@ -15,7 +15,7 @@ export default function Navbar() {
     <div className={styles.navbar}>
       <div className={styles.nomeLoja}>BUDIN COMIDAS</div>
       <BotaoCart modalHandler={modalHandler} />
-      <Modal aberto={modalAberto} modalHandler={modalHandler}>
+      <Modal aberto={modalAberto}>
         <Carrinho modalHandler={modalHandler} />
       </Modal>
     </div>

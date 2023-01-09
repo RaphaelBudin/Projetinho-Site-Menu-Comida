@@ -5,6 +5,9 @@ import CardCinza from "./components/UI/CardCinza";
 import CardBranco from "./components/UI/CardBranco";
 import styles from "./App.module.css";
 import FotoMesa from "./public/foto-mesa.jpg";
+import {
+  AllProductsContext,
+} from "./context/lista-produtos-context";
 
 const opcoesMenu = [
   { id: 1, nome: "Sushi", descricao: "Peixe cru, arroz e alga", valor: 22.99 },
@@ -31,14 +34,23 @@ function App() {
   }, [carrinho]);
 
   return (
-    <div>
-      <Navbar />
-      <div className={styles.mainContainer}>
-        <img src={FotoMesa} className={styles.imagemFundo} alt="" />
-        <CardCinza titulo={TituloLorem} descricao={TextoLorem} />
-        <CardBranco addProductHandler={addProductHandler} itens={opcoesMenu} />
-      </div>
-    </div>
+    <AllProductsContext.Provider
+      value={{
+        opcoesMenu: opcoesMenu,
+        carrinho: carrinho,
+        atualizaQuantidadeHandler: atualizaQuantidadeHandler,
+      }}
+    >
+        <Navbar />
+        <div className={styles.mainContainer}>
+          <img src={FotoMesa} className={styles.imagemFundo} alt="" />
+          <CardCinza titulo={TituloLorem} descricao={TextoLorem} />
+          <CardBranco
+            addProductHandler={addProductHandler}
+            itens={opcoesMenu}
+          />
+        </div>
+    </AllProductsContext.Provider>
   );
 
   function addProductHandler(produtoSelecionado, qtdProdutoSelecionado) {
@@ -47,7 +59,7 @@ function App() {
     console.log("qtdProdutoSelecionado", qtdProdutoSelecionado);
     if (verificaJaExiste(produtoSelecionado)) {
       console.log("PRODUTO JÁ EXISTE");
-      const arrayAtualizado = atualizaQuantidade(
+      const arrayAtualizado = somaQuantidad(
         // ...opcoesMenu,
         produtoSelecionado,
         qtdProdutoSelecionado
@@ -69,12 +81,20 @@ function App() {
   }
 
   // Deixar idiomático: tem que receber o array via argumento
-  function atualizaQuantidade(produtoSelecionado, quantidadeADD) {
+  function somaQuantidad(produtoSelecionado, quantidadeADD) {
     const arrayAtualizado = carrinho.map((item) => {
       if (item.id !== produtoSelecionado) return item;
-      return { id: item.id, quantidade: (+item.quantidade) + (+quantidadeADD) };
+      return { id: item.id, quantidade: +item.quantidade + +quantidadeADD };
     });
     return arrayAtualizado;
+  }
+
+  function atualizaQuantidadeHandler(IDprodutoSelecionado, novaQuantidade) {
+    const arrayAtualizado = carrinho.map((item) => {
+      if (item.id !== IDprodutoSelecionado) return item;
+      return { ...item, quantidade: novaQuantidade };
+    });
+    setCarrinho(arrayAtualizado);
   }
 }
 
