@@ -28,7 +28,7 @@ Os imports devem ser organizados na ordem que segue:
 ## Padrão de Estilos ##
 Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
 
-- Display, formatação layout e derivados (flex, flex-direcion, justify-content, text-align) 
+- Display, formatação layout e derivados (z-Index, flex, flex-direcion, justify-content, text-align) 
 - Dimensões (width, height)
 - Margens   (top,left)
 - Padding   (top, left, right, down)
