@@ -3,8 +3,6 @@
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    height: 50vh;
-    width: 50vh;
     background-color: white;
     color: black;
 }
@@ -21,7 +19,67 @@
 }
 
 .conteudo {
-    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
     color: black;
-    background-color: purple;
+    padding: 4px 12px;
+}
+
+.linha {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    height: fit-content;
+}
+
+.informacoes {
+    padding: 4px 10px 4px 6px;
+}
+
+.botoes{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 48px;
+}
+
+.botao {
+    margin: auto;
+}
+
+.nome {
+    color: darkorange;
+    font-weight: 400;
+}
+
+.descricao {
+    font-style: oblique;
+    font-size: 12px;
+}
+
+.valor {
+    font-size: 14px;
+    color: #001e00;
+}
+
+.input { 
+    text-align: right;
+    margin-left: 8px;
+    height: 45px;
+    width: 48px;
+}
+
+.subTotal {
+    color: blueviolet;
+}
+
+.label {
+    margin: auto;
+    font-size: 12px;
+}
+
+.lixeira {
+    text-align: right;
+    margin-right: 24px;
 }
