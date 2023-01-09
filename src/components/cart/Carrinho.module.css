@@ -71,6 +71,7 @@
 }
 
 .subTotal {
+    text-align: right;
     color: blueviolet;
 }
 

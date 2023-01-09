@@ -2,7 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Carrinho.module.css";
 
-export default function LinhaCarrinho({ produto, retornaPropriedadeObjeto, atualizaQuantidadeHandler }) {
+export default function LinhaCarrinho({
+  produto,
+  retornaPropriedadeObjeto,
+  atualizaQuantidadeHandler,
+}) {
   return (
     <>
       <div key={produto.id} className={styles.linha}>
@@ -30,15 +34,17 @@ export default function LinhaCarrinho({ produto, retornaPropriedadeObjeto, atual
               min="1"
               defaultValue={produto.quantidade}
               className={styles.input}
-              onChange={(evento)=>atualizaQuantidadeHandler(produto.id,evento.target.value)}
+              onChange={(evento) =>
+                atualizaQuantidadeHandler(produto.id, evento.target.value)
+              }
             />
           </div>
 
-          <div className={styles.linha}>
-            <span className={styles.label}>Subtotal</span>
-            <span className={styles.subTotal}>
-              {produto.quantidade * retornaPropriedadeObjeto(produto, "valor")}
-            </span>
+          <div className={styles.subTotal}>
+            R$
+            {(
+              produto.quantidade * retornaPropriedadeObjeto(produto, "valor")
+            ).toFixed(2)}
           </div>
 
           <span className={styles.lixeira}>
