@@ -39,6 +39,7 @@ function App() {
         opcoesMenu: opcoesMenu,
         carrinho: carrinho,
         atualizaQuantidadeHandler: atualizaQuantidadeHandler,
+        excluiProdutoHandler: excluiProdutoHandler,
       }}
     >
         <Navbar />
@@ -94,6 +95,11 @@ function App() {
       if (item.id !== IDprodutoSelecionado) return item;
       return { ...item, quantidade: novaQuantidade };
     });
+    setCarrinho(arrayAtualizado);
+  }
+
+  function excluiProdutoHandler(IDprodutoSelecionado){
+    const arrayAtualizado = [...carrinho].filter(produto => produto.id !== IDprodutoSelecionado);
     setCarrinho(arrayAtualizado);
   }
 }

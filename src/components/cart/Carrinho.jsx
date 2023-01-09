@@ -22,9 +22,8 @@ export default function Carrinho({ modalHandler }) {
                 className={styles.linha}
                 produto={produto}
                 retornaPropriedadeObjeto={retornaPropriedadeObjeto}
-                atualizaQuantidadeHandler={
-                  todosProdutos.atualizaQuantidadeHandler
-                }
+                atualizaQuantidadeHandler={todosProdutos.atualizaQuantidadeHandler}
+                excluiProdutoHandler={todosProdutos.excluiProdutoHandler}
               />
             );
           })}

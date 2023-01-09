@@ -4,4 +4,5 @@ export const AllProductsContext = createContext({
   opcoesMenu: [],
   carrinho: [],
   atualizaQuantidadeHandler: ()=>{},
+  excluiProdutoHandler: ()=>{},
 });

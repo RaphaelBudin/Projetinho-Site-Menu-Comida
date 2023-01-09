@@ -6,6 +6,7 @@ export default function LinhaCarrinho({
   produto,
   retornaPropriedadeObjeto,
   atualizaQuantidadeHandler,
+  excluiProdutoHandler,
 }) {
   return (
     <>
@@ -47,7 +48,7 @@ export default function LinhaCarrinho({
             ).toFixed(2)}
           </div>
 
-          <span className={styles.lixeira}>
+          <span className={styles.lixeira} onClick={()=>excluiProdutoHandler(produto.id)}>
             <FontAwesomeIcon icon={faTrash} color="darkred" />
           </span>
           <br />
