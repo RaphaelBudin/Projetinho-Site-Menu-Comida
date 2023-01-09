@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
 import styles from "./Modal.module.css";
 
 export default function Modal({ aberto, children }) {
@@ -6,8 +6,14 @@ export default function Modal({ aberto, children }) {
 
   return (
     <>
-    {ReactDOM.createPortal(<div className={styles.backdrop}></div>,document.getElementById('backdrop'))}
-    {ReactDOM.createPortal(<div className={styles.overlay}>{children}</div>,document.getElementById('overlay'))}
+      {ReactDOM.createPortal(
+        <div className={styles.backdrop}></div>,
+        document.getElementById("backdrop")
+      )}
+      {ReactDOM.createPortal(
+        <div className={styles.backdrop}>{children}</div>,
+        document.getElementById("overlay")
+      )}
     </>
   );
 }
