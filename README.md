@@ -54,16 +54,16 @@ Cada elemento poderá definir, na seguinte ordem, suas propriedades CSS:
     - Tìtulo [x]
     - Descrição [x]
 
-- Card Branco
-    - Opção Menu
-        - Produto
-            - Nome Item
-            - Breve descrição
-            - Preço
-        - Adicionar Produto
-            - Texto
-            - Quantia
-            - Botão adicionar quantia
+- Card Branco [x]
+    - Opção Menu [x]
+        - Produto [x]
+            - Nome Item [x]
+            - Breve descrição [x]
+            - Preço [x]
+        - Adicionar Produto [x]
+            - Texto [x]
+            - Quantia [x]
+            - Botão adicionar quantia [x]
 
 - PopUp Carrinho Modal
     - Card Branco
