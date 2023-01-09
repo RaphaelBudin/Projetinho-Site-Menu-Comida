@@ -84,3 +84,20 @@
     text-align: right;
     margin-right: 24px;
 }
+
+.total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 12px;
+    font-weight: 700;
+}
+
+.totalPedido {
+    color: green;
+}
+
+.botaoFecharPedido {
+    position: relative;
+    margin: 12px 40%;
+}

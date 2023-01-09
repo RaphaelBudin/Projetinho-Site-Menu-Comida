@@ -9,10 +9,15 @@ export default function Carrinho({ modalHandler }) {
 
   useEffect(() => {
     if (todosProdutos.carrinho.length > 0) {
-      const localTotalPedido = todosProdutos.carrinho.reduce((somaParcial, produtoAtual) => {
-        const valorProdutoAtual = todosProdutos.opcoesMenu.find(x => x.id === produtoAtual.id).valor;
-        return somaParcial + produtoAtual.quantidade * valorProdutoAtual;
-      }, 0);
+      const localTotalPedido = todosProdutos.carrinho.reduce(
+        (somaParcial, produtoAtual) => {
+          const valorProdutoAtual = todosProdutos.opcoesMenu.find(
+            (x) => x.id === produtoAtual.id
+          ).valor;
+          return somaParcial + produtoAtual.quantidade * valorProdutoAtual;
+        },
+        0
+      );
       setTotalPedido(localTotalPedido.toFixed(2));
     }
   }, [todosProdutos]);
@@ -42,8 +47,12 @@ export default function Carrinho({ modalHandler }) {
           })}
       </div>
 
-      <div className={styles.total}>Total: {totalPedido}</div>
-      <button onClick={fecharPedidoHandler}> Fechar Pedido </button>
+      <div className={styles.total}>
+        <span>Total</span>
+        <span className={styles.totalPedido}>R$ {totalPedido}</span>
+      </div>
+
+      <button className={styles.botaoFecharPedido} onClick={fecharPedidoHandler}> Fechar Pedido </button>
     </div>
   );
 
@@ -62,8 +71,8 @@ export default function Carrinho({ modalHandler }) {
         return "Propriedade do switch não identificada";
     }
   }
-  
-  function fecharPedidoHandler(){
+
+  function fecharPedidoHandler() {
     alert("Pedido fechado!");
   }
 }
