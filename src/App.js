@@ -55,13 +55,8 @@ function App() {
   );
 
   function addProductHandler(produtoSelecionado, qtdProdutoSelecionado) {
-    console.log("AddProductHandler");
-    console.log("produtoSelecionado", produtoSelecionado);
-    console.log("qtdProdutoSelecionado", qtdProdutoSelecionado);
     if (verificaJaExiste(produtoSelecionado)) {
-      console.log("PRODUTO JÁ EXISTE");
       const arrayAtualizado = somaQuantidad(
-        // ...opcoesMenu,
         produtoSelecionado,
         qtdProdutoSelecionado
       );
