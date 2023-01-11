@@ -97,7 +97,25 @@
     color: green;
 }
 
-.botaoFecharPedido {
-    position: relative;
-    margin: 12px 40%;
+.linhaBotoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 500px;
+    margin-top: 14px;
+    margin-left: 36px;
+    margin-bottom: 14px;
+}
+
+.botaoFazerPedido {
+    padding: 10px;
+    background-color: green;
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
+
+.botaoFecharCarrinho {
+    background-color: darkred;
+    color: whitesmoke;
+    border-color: whitesmoke;
 }

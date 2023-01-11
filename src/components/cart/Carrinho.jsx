@@ -51,8 +51,10 @@ export default function Carrinho({ modalHandler }) {
         <span>Total</span>
         <span className={styles.totalPedido}>R$ {totalPedido}</span>
       </div>
-
-      <button className={styles.botaoFecharPedido} onClick={fecharPedidoHandler}> Fechar Pedido </button>
+<div className={styles.linhaBotoes}>
+      <button className={styles.botaoFecharCarrinho} onClick={modalHandler}> Fechar </button>
+      <button className={styles.botaoFazerPedido} onClick={fecharPedidoHandler}> Fazer Pedido </button>
+</div>
     </div>
   );
 
