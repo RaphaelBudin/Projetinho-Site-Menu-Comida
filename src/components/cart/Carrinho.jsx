@@ -1,49 +1,20 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { AllProductsContext } from "../../context/lista-produtos-context";
-import LinhaCarrinho from "./LinhaCarrinho";
 import styles from "./Carrinho.module.css";
-import LinhaTotal from "./LinhaTotal";
+import Total from "./Total";
+import HeaderCarrinho from "./Header";
+import Conteudo from "./Conteudo";
+import Botoes from "./Botoes";
 
 export default function Carrinho({ modalHandler }) {
   const contextoProdutos = useContext(AllProductsContext);
 
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <span>Itens Carrinho</span>
-        <span onClick={modalHandler}>❌</span>
-      </div>
-
-      <div className={styles.conteudo}>
-        {contextoProdutos.carrinho &&
-          contextoProdutos.carrinho.map((produto) => {
-            return (
-              <LinhaCarrinho
-                key={produto.id}
-                className={styles.linha}
-                produto={produto}
-                retornaPropriedadeObjeto={retornaPropriedadeObjeto}
-                atualizaQuantidadeHandler={
-                  contextoProdutos.atualizaQuantidadeHandler
-                }
-                excluiProdutoHandler={contextoProdutos.excluiProdutoHandler}
-              />
-            );
-          })}
-      </div>
-
-      <LinhaTotal totalPedido={contextoProdutos.totalPedido}/>
-      <div className={styles.linhaBotoes}>
-        <button className={styles.botaoFecharCarrinho} onClick={modalHandler}>
-          Fechar
-        </button>
-        <button
-          className={styles.botaoFazerPedido}
-          onClick={fecharPedidoHandler}
-        >
-          Fazer Pedido
-        </button>
-      </div>
+      <HeaderCarrinho modalHandler={modalHandler}/>
+      <Conteudo contextoProdutos={contextoProdutos} retornaPropriedadeObjeto={retornaPropriedadeObjeto}/>
+      <Total totalPedido={contextoProdutos.totalPedido}/>
+      <Botoes modalHandler={modalHandler} fecharPedidoHandler={fecharPedidoHandler}/>
     </div>
   );
 

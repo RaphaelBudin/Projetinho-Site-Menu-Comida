@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Carrinho.module.css";
 
-export default function LinhaCarrinho({
+export default function Produto({
   produto,
   retornaPropriedadeObjeto,
   atualizaQuantidadeHandler,

@@ -21,9 +21,10 @@
 .conteudo {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    /* text-align: left; */
     color: black;
-    padding: 4px 12px;
+    /* padding: 4px 12px; */
+    /* background-color: yellow; */
 }
 
 .linha {
@@ -82,7 +83,6 @@
 
 .lixeira {
     text-align: right;
-    margin-right: 24px;
 }   
 
 .linhaTotal {

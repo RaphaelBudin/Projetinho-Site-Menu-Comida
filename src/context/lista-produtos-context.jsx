@@ -37,10 +37,10 @@ export function AllProductsContextProvider({ children }) {
   const [totalPedido, setTotalPedido] = useState();
 
   useEffect(() => {
-    console.log("Carrinho: ", carrinho);
   }, [carrinho]);
 
   useEffect(() => {
+    console.log("Carrinho: ", carrinho);
     if (carrinho.length > 0) {
       const localTotalPedido = carrinho.reduce(
         (somaParcial, produtoAtual) => {
@@ -52,6 +52,9 @@ export function AllProductsContextProvider({ children }) {
         0
       );
       setTotalPedido(localTotalPedido.toFixed(2));
+    }
+    else{
+      setTotalPedido(0);
     }
   }, [carrinho]);
 
