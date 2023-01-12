@@ -9,9 +9,8 @@ export default function Produto({
   excluiProdutoHandler,
 }) {
   return (
-    <>
       <div key={produto.id} className={styles.linha}>
-        <div className={styles.informacoes}>
+        <div>
           <span className={styles.nome}>
             {retornaPropriedadeObjeto(produto, "nome")}
           </span>
@@ -23,11 +22,9 @@ export default function Produto({
           <span className={styles.valor}>
             {retornaPropriedadeObjeto(produto, "valor")}
           </span>
-          <br />
-          <br />
         </div>
         <div className={styles.botoes}>
-          <div className={styles.linha}>
+          <div>
             <span className={styles.label}> Quantidade </span>
             <input
               type="number"
@@ -51,10 +48,7 @@ export default function Produto({
           <span className={styles.lixeira} onClick={()=>excluiProdutoHandler(produto.id)}>
             <FontAwesomeIcon icon={faTrash} color="darkred" />
           </span>
-          <br />
-          <br />
         </div>
       </div>
-    </>
   );
 }

@@ -3,7 +3,7 @@
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    background-color: white;
+    background-color: whitesmoke;
     color: black;
 }
 
@@ -21,27 +21,25 @@
 .conteudo {
     display: flex;
     flex-direction: column;
-    /* text-align: left; */
+    text-align: left;
     color: black;
-    /* padding: 4px 12px; */
-    /* background-color: yellow; */
+    padding: 4px 12px;
 }
 
 .linha {
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    height: fit-content;
-}
-
-.informacoes {
-    padding: 4px 10px 4px 6px;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid darkgoldenrod;
 }
 
 .botoes{
     display: flex;
     flex-direction: column;
     text-align: left;
+    height: fit-content;
     margin-left: 48px;
 }
 
@@ -57,6 +55,9 @@
 .descricao {
     font-style: oblique;
     font-size: 12px;
+    width: 100%;
+    word-break: break-word;
+    padding-right: 14px;
 }
 
 .valor {
@@ -100,7 +101,6 @@
 .linhaBotoes {
     display: flex;
     justify-content: space-evenly;
-    width: 500px;
     margin-top: 14px;
     margin-left: 36px;
     margin-bottom: 14px;
