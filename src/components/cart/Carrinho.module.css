@@ -85,21 +85,20 @@
     margin-right: 24px;
 }   
 
-.total {
+.linhaTotal {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: right;
     padding: 0px 12px;
     font-weight: 700;
 }
 
 .totalPedido {
+    margin-left: 14px;
     color: green;
 }
 
 .linhaBotoes {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
     width: 500px;
     margin-top: 14px;
