@@ -1,5 +1,10 @@
 import { useState, useEffect, createContext } from "react";
 
+//                    ATENÇÃO !!!
+//
+// Só faz sentido colocar o Menu no Context por ser uma lista CURTA e FECHADA de opções
+// Para marketplaces de verdade, com um grande número de opções, mesmo que fechadas, seria totalmente inviável
+// Como este projetinho é para praticar contextos aprendidos, entre eles, useContext, achei válido experimentar
 const opcoesMenu = [
   { id: 1, nome: "Sushi", descricao: "Peixe cru, arroz e alga", valor: 22.99 },
   { id: 2, nome: "Schitzel", descricao: "Uma iguaria Alemâ", valor: 16.77 },
@@ -68,13 +73,11 @@ export function AllProductsContextProvider({ children }) {
     setCarrinho((prevState) => [...prevState, novoProduto]);
   }
 
-  // Deixar idiomático: tem que receber o array via argumento
   function verificaJaExiste(itemID) {
     const produtoJaExiste = carrinho.find((op) => op.id === itemID);
     return produtoJaExiste ? true : false;
   }
 
-  // Deixar idiomático: tem que receber o array via argumento
   function somaQuantidade(produtoSelecionado, quantidadeADD) {
     const arrayAtualizado = carrinho.map((item) => {
       if (item.id !== produtoSelecionado) return item;
