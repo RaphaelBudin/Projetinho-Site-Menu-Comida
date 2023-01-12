@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { AllProductsContext } from "../../context/lista-produtos-context";
 import LinhaCarrinho from "./LinhaCarrinho";
 import styles from "./Carrinho.module.css";
+import LinhaTotal from "./LinhaTotal";
 
 export default function Carrinho({ modalHandler }) {
   const contextoProdutos = useContext(AllProductsContext);
@@ -31,10 +32,7 @@ export default function Carrinho({ modalHandler }) {
           })}
       </div>
 
-      <div className={styles.total}>
-        <span>Total</span>
-        <span className={styles.totalPedido}>R$ {contextoProdutos.totalPedido}</span>
-      </div>
+      <LinhaTotal totalPedido={contextoProdutos.totalPedido}/>
       <div className={styles.linhaBotoes}>
         <button className={styles.botaoFecharCarrinho} onClick={modalHandler}>
           Fechar
