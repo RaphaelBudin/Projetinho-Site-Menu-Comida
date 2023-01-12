@@ -12,6 +12,7 @@ O padrão utilizado neste projeto é baseado no **Conventional Commits**, porém
 - Usando 'style' para informar alterações na estilização e layout do código, ao invés do 'feat'
 - Não informarei alterações em linter, trailing spaces e etc.
 - Usarei 'readme' ao invés do 'docs' para informar alterações específicas do Readme
+- Usarei 'docs' apenas para documentação dentro do código, não envolve o README
 
 ## Padrão de Importação ##
 Os imports devem ser organizados na ordem que segue:
