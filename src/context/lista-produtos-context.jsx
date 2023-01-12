@@ -30,6 +30,7 @@ export const AllProductsContext = createContext({
   somaQuantidade: (produtoSelecionado, quantidadeADD)=>{},
   atualizaQuantidadeHandler: (IDprodutoSelecionado, novaQuantidade) => {},
   excluiProdutoHandler: (IDprodutoSelecionado) => {},
+  retornaPropriedadeObjeto: (objeto, propriedade)=>{},
 });
 
 export function AllProductsContextProvider({ children }) {
@@ -104,6 +105,22 @@ export function AllProductsContextProvider({ children }) {
     setCarrinho(arrayAtualizado);
   }
 
+  function retornaPropriedadeObjeto(objeto, propriedade) {
+    const produto = opcoesMenu.find(
+      (prod) => prod.id === objeto.id
+    );
+    switch (propriedade) {
+      case "nome":
+        return produto.nome;
+      case "descricao":
+        return produto.descricao;
+      case "valor":
+        return produto.valor;
+      default:
+        return "Propriedade do switch não identificada";
+    }
+  }
+
   return (
     <AllProductsContext.Provider
       value={{
@@ -115,6 +132,7 @@ export function AllProductsContextProvider({ children }) {
         somaQuantidade: somaQuantidade,
         atualizaQuantidadeHandler: atualizaQuantidadeHandler,
         excluiProdutoHandler: excluiProdutoHandler,
+        retornaPropriedadeObjeto: retornaPropriedadeObjeto,
       }}
     >
       {children}
