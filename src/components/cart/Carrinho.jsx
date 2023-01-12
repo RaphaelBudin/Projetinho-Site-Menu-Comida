@@ -4,23 +4,7 @@ import LinhaCarrinho from "./LinhaCarrinho";
 import styles from "./Carrinho.module.css";
 
 export default function Carrinho({ modalHandler }) {
-  const todosProdutos = useContext(AllProductsContext);
-  const [totalPedido, setTotalPedido] = useState();
-
-  useEffect(() => {
-    if (todosProdutos.carrinho.length > 0) {
-      const localTotalPedido = todosProdutos.carrinho.reduce(
-        (somaParcial, produtoAtual) => {
-          const valorProdutoAtual = todosProdutos.opcoesMenu.find(
-            (x) => x.id === produtoAtual.id
-          ).valor;
-          return somaParcial + produtoAtual.quantidade * valorProdutoAtual;
-        },
-        0
-      );
-      setTotalPedido(localTotalPedido.toFixed(2));
-    }
-  }, [todosProdutos]);
+  const contextoProdutos = useContext(AllProductsContext);
 
   return (
     <div className={styles.container}>
@@ -30,8 +14,8 @@ export default function Carrinho({ modalHandler }) {
       </div>
 
       <div className={styles.conteudo}>
-        {todosProdutos.carrinho &&
-          todosProdutos.carrinho.map((produto) => {
+        {contextoProdutos.carrinho &&
+          contextoProdutos.carrinho.map((produto) => {
             return (
               <LinhaCarrinho
                 key={produto.id}
@@ -39,9 +23,9 @@ export default function Carrinho({ modalHandler }) {
                 produto={produto}
                 retornaPropriedadeObjeto={retornaPropriedadeObjeto}
                 atualizaQuantidadeHandler={
-                  todosProdutos.atualizaQuantidadeHandler
+                  contextoProdutos.atualizaQuantidadeHandler
                 }
-                excluiProdutoHandler={todosProdutos.excluiProdutoHandler}
+                excluiProdutoHandler={contextoProdutos.excluiProdutoHandler}
               />
             );
           })}
@@ -49,17 +33,24 @@ export default function Carrinho({ modalHandler }) {
 
       <div className={styles.total}>
         <span>Total</span>
-        <span className={styles.totalPedido}>R$ {totalPedido}</span>
+        <span className={styles.totalPedido}>R$ {contextoProdutos.totalPedido}</span>
       </div>
-<div className={styles.linhaBotoes}>
-      <button className={styles.botaoFecharCarrinho} onClick={modalHandler}> Fechar </button>
-      <button className={styles.botaoFazerPedido} onClick={fecharPedidoHandler}> Fazer Pedido </button>
-</div>
+      <div className={styles.linhaBotoes}>
+        <button className={styles.botaoFecharCarrinho} onClick={modalHandler}>
+          Fechar
+        </button>
+        <button
+          className={styles.botaoFazerPedido}
+          onClick={fecharPedidoHandler}
+        >
+          Fazer Pedido
+        </button>
+      </div>
     </div>
   );
 
   function retornaPropriedadeObjeto(objeto, propriedade) {
-    const produto = todosProdutos.opcoesMenu.find(
+    const produto = contextoProdutos.opcoesMenu.find(
       (prod) => prod.id === objeto.id
     );
     switch (propriedade) {
