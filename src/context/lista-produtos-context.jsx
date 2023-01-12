@@ -48,7 +48,7 @@ export function AllProductsContextProvider({ children }) {
       );
       setTotalPedido(localTotalPedido.toFixed(2));
     }
-  }, []);
+  }, [carrinho]);
 
 
   function addProductHandler(produtoSelecionado, qtdProdutoSelecionado) {
