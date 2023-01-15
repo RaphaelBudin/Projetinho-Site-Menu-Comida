@@ -1,6 +1,12 @@
 # Projetinho-Site-Menu-Comida
  Projetinho para Treinar conceitos aprendidos em react, assim como arquitetura planejada
 
+# Vídeo de Demonstração
+[![Demonstração deste projeto](https://img.youtube.com/vi/2eoyg9y-pPU/0.jpg)](https://www.youtube.com/watch?v=2eoyg9y-pPU)
+
+# Vercel
+https://menu-comida-cardapio.vercel.app/
+
 ## Dependências do Projeto ##
 FontAwesome
 https://fontawesome.com/v5/docs/web/use-with/react
